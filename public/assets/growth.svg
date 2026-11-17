@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <style>
+    .st0 {
+      fill: none;
+      stroke: #0E2E28;
+      stroke-width: 2;
+      stroke-linejoin: bevel;
+      stroke-dasharray: 2;
+    }
+    .st1 {
+      fill: none;
+      stroke: #0E2E28;
+      stroke-width: 2;
+      stroke-linejoin: bevel;
+    }
+    @keyframes rotateRing {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes dropAndLift {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      60% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      65% {
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+      95% {
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    @keyframes colorChange {
+      0% {
+        fill: #B9E675;
+        stroke: #B9E675;
+      }
+      60% {
+        fill: #B9E675;
+        stroke: #B9E675;
+      }
+      65% {
+        fill: #CDFA8A;
+        stroke: #CDFA8A;
+      }
+      95% {
+        fill: #CDFA8A;
+        stroke: #CDFA8A;
+      }
+      100% {
+        fill: #B9E675;
+        stroke: #B9E675;
+      }
+    }
+    @keyframes dashScroll {
+      0% {
+        stroke-dashoffset: 10;
+      }
+      60% {
+        stroke-dashoffset: 10;
+      }
+      100% {
+        stroke-dashoffset: -20;
+      }
+    }
+    .rotating-ring {
+      transform-origin: center;
+      animation: rotateRing 20s linear infinite;
+    }
+    .marker {
+      transform-origin: center bottom;
+      animation: dropAndLift 12s cubic-bezier(.17,.67,.83,.67) infinite,
+                 colorChange 12s ease-in-out infinite;
+      fill: #B9E675;
+      stroke: #B9E675;
+      stroke-width: 2;
+      stroke-linejoin: bevel;
+    }
+    .inner-oval {
+      stroke-dasharray: 2;
+      animation: dashScroll 12s linear infinite;
+    }
+  </style>
+
+  <!-- Rotating outer ring -->
+  <path class="st0 rotating-ring" d="M60,108c26.5,0,48-21.5,48-48S86.5,12,60,12S12,33.5,12,60S33.5,108,60,108z"/>
+
+  <!-- Static circle -->
+  <circle class="st1" cx="60" cy="60" r="32"/>
+
+  <!-- Tangent ovals for planet grid effect -->
+  <ellipse class="st0 inner-oval" cx="60" cy="60" rx="32" ry="12"/>
+  <ellipse class="st0 inner-oval" transform="rotate(90,60,60)" cx="60" cy="60" rx="32" ry="12"/>
+
+  <!-- Animated marker -->
+  <path class="marker" d="M68.5,47.5c4.7,4.7,4.7,12.3,0,17L60,83l-8.5-18.5c-4.7-4.7-4.7-12.3,0-17S63.8,42.8,68.5,47.5z M60,48c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S63.3,48,60,48z"/>
+</svg>
