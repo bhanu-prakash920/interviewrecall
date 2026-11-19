@@ -2,6 +2,15 @@
 
 A coding interview revision companion built with React, TypeScript, Vite, Tailwind, Java 17, Spring Boot, and MySQL.
 
+## Presentation setup
+
+Run `npm run present` from this directory, then open http://127.0.0.1:5173 and sign in:
+
+- Email: `demo@interviewrecall.test`
+- Password: `Recall@123456`
+
+The opt-in presentation profile seeds 12 problems and 41 illustrative revision records once. Restarts preserve your changes. On this Mac the startup helper uses native MySQL in the ignored `.local/mysql` directory on port 3307 and starts the Java API; it reuses an already running frontend. The existing database on port 3306 is not modified. Docker Compose is the fallback when native MySQL is unavailable. See [PROJECT_EXPLANATION.md](PROJECT_EXPLANATION.md) for the full explanation, startup details, credentials, presentation walkthrough, and evaluation questions.
+
 ## Start the local demo
 
 ```sh
@@ -13,7 +22,7 @@ Open http://127.0.0.1:5173. The clearly labeled demo contains sample problems an
 
 ## Start the complete account workflow
 
-Prerequisites: Node 20.19+ or 22.12+, Java 17+, Maven 3.6+, Docker Compose (or an existing MySQL 8 database).
+Prerequisites: Node 22.12+, Java 17+, Maven 3.6+, Docker Compose (or an existing MySQL 8 database).
 
 From this directory:
 

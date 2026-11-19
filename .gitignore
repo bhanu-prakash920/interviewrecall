@@ -7,3 +7,6 @@ backend/target/
 tsconfig.tsbuildinfo
 playwright-report/
 test-results/
+
+# Local presentation database, service logs and process state
+.local/

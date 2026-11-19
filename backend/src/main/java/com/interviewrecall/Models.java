@@ -41,10 +41,10 @@ class Problem {
 
   String platform, difficulty, topic;
 
-  @Column(length = 10000)
+  @Column(columnDefinition = "TEXT")
   String notes;
 
-  @Column(length = 10000)
+  @Column(columnDefinition = "TEXT")
   String approach;
 
   int confidence = 50, intervalDays = 1, repetitions = 0;
